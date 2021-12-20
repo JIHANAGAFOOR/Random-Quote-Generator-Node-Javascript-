@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website | <%=title%></title>
+  <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body id="bg1">
+  <div class="container-fluid" id="bg2">
+    <nav class="navbar navbar-expand-sm navbar-dark >
+  
+      <a class="navbar-brand" href="#"> <b id="text2">YOUR WEBSITE</b></a>
+      <button id="button4"class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        
+         <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
+        <ul class=" nav navbar-nav mr-auto">
+      <li class="nav-item"><a href="#" class="nav-link"><p id="text1">Home</p></a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><p id="text1">About us</p></a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><p id="text1">Work</p></a></li>
+      <li class="nav-item"><a href="#" class="nav-link"><p id="text1">info</p></a></li>
+      <li class="nav-item"><a href="/register" class="nav-link"><p id="text1"><button id="button1"><%=registerDetails.name%>
+      </button><br><span><%=registerDetails.email%></span></p></a></li>
+    </ul>
+      </div>
+    
+  </nav>
+    <div class="row" id="blank1"></div>
+    <div class="row">
+      <div class="col-sm-3">
+     <span id="text3">Inspirational Quotes</span>
+    </div>
+    </div><br>
+    <div class="row">
+      <div class="col-sm-4">
+       
+        <span id="text4">Lord Ipsum nullam aliquet nunc ornare posuere fringilla. Nam auctor massa nec hendrerit efficitur. Mauris sem massa, feugiat in ante et, mollis tempus lacus</span>
+   
+      </div>
+    </div><br>
+   <a > <button id="button2">Button Name</button></a>
+  </div>
+  <script>
+    const generateQuote = function() {
+    const quotes = [
+    {
+        quote: "Do not pity the dead, Harry. Pity the living, and, above all those who live without love.",
+        
+    },
+    {
+        quote: "It is impossible to manufacture or imitate love",
+        
+    },
+    {
+        quote: "Being different isn't a bad thing. I means that you are brave enough to be yourself.",
+       
+    },
+    {
+        quote: "If you want to know what a man’s like, take a good look at how he treats his inferiors, not his equals.",
+       
+    },
+    {
+        quote: "Never trust anything that can think for itself if you can’t see where it keeps its brain.",
+        
+    },
+    {
+        quote: "Every human life is worth the same, and worth saving.",
+       
+    },
+    {
+        quote: "Have a biscuit, Potter.",
+        
+    },
+    {
+        quote: "Happiness can be found even in the darkest of times, if one only remembers to turn on the light.",
+        
+    },
+    {
+        quote: "Socks are Dobby’s favorite, favorite clothes, sir!",
+      
+    }
+];
+
+    let arrayIndex = Math.floor(Math.random() * quotes.length);
+    document.getElementById("text4").innerHTML = quotes[arrayIndex].quote;
+    
+
+}
+window.onload = function() {
+    generateQuote();
+    document.getElementById("button2").addEventListener('click', generateQuote);
+}
+  </script>
+  <style>
+    #bg1{
+      background-image: url("https://www.technocrazed.com/wp-content/uploads/2015/12/HD-purple-wallpaper-image-to-use-as-background-132.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 800px;
+      padding: 60px;
+    }
+    #bg2{
+      /* background-color: white; */
+      background-image: url("https://png.pngtree.com/back_origin_pic/03/92/96/9b9b8d9084aeada6ce340510f76926f9.jpg");
+      height: 600px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 20px;
+      padding: 30px;
+    }
+    #text1{
+      color: grey;
+    }
+    #button1{
+      background-color: #B679E5;
+      border:none;
+      border-radius: 10px;
+      padding: 5px;
+    }
+    #blank1{
+      height: 100px;
+    }
+    #text3{
+      color: darkblue;
+      font-size: 40px;
+      font-weight: bolder;
+      font-family:'Times New Roman', Times, serif;
+      letter-spacing: 3px;
+    }
+    #text4{
+      text-align: justify;
+      font-weight: bolder;
+      
+    }
+    #button2{
+      background-color: #B679E5;
+      border:none;
+      border-radius: 10px;
+      padding: 10px;
+      width:200px
+    }
+    #button4{
+      background-color: #B679E5;
+    }
+  </style>
+</body>
+</html>
